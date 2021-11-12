@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  naver_book_client_id: 'vRIFPatmHYXkbRCxZZyZ',
+  naver_book_client_secret : 'X6D5eIfeiy'
 };
 
 /*
