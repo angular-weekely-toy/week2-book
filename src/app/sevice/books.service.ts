@@ -21,8 +21,6 @@ export class BooksService {
     
     getBooksTitleSearch(title: string): Observable<any[]> {
         const params = new HttpParams().set('query', title);
-        const url = environment.apiBookUrl + '?' + params;
-        console.log(url);
         try {
             return this.http.get<any>('/books' + '?' + params, httpOptions).pipe();
         } catch(e) {
