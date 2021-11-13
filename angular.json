@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "98f722e2-8dbd-4531-a525-68b710f7ccbc"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -66,9 +69,13 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "week2-book:build",
+            "proxyConfig": "src/environments/config/src/proxy.config.json"
+          },
           "configurations": {
             "production": {
-              "browserTarget": "week2-book:build:production"
+              "browserTarget": "week2-book:build:production"  
             },
             "development": {
               "browserTarget": "week2-book:build:development"
